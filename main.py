@@ -1,7 +1,9 @@
 import requests
 import telebot
-
-bot = telebot.TeleBot("8306426965:AAGfggiWygbLv5alwObCekF7jRXhv9UaSbY")
+import os
+from dotenv import load_dotenv
+load_dotenv()
+bot = telebot.TeleBot(os.getenv("TOKEN"))
 
 
 def load_prices():
